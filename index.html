@@ -1,0 +1,86 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+</head>
+
+<body>
+    <div class="master-classes">
+        <div class="mc-cards"></div>
+    </div>
+
+    <div class="enroll-modal-box open">
+        <div class="enroll-modal">
+            <div class="modal-close"><img class="modal-close-icon" src="/img/close-button.svg" alt=""></div>
+
+            <div class="modal-header modal-block">
+                <img class="modal-header-cover" src="https://storage.geekclass.ru/images/080d1774-fece-462b-9388-46cc311eb657.jpg" alt="">
+                <div class="modal-header-info">
+                    <div class="modal-header-title">Моды Minecraft</div>
+                    <div class="modal-header-extra">
+                        <span class="header-extra-item"><img class="extra-item-icon" src="/img/level.svg" alt=""> <span>1-2 класс</span></span>
+                        <span class="header-extra-item"><img class="extra-item-icon" src="/img/clock.svg" alt=""> <span>90 мин</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-enroll modal-block">
+                <form class="modal-enroll-form" action="/" method="POST">
+                    <div class="enroll-field-wrap">
+                        <input class="enroll-input enroll-input-field" type="text" name="name" id="enroll-name" required>
+                        <label for="enroll-name" class="enroll-field-label">Имя</label>
+                    </div>
+                    <div class="enroll-field-wrap">
+                        <input class="enroll-input enroll-input-field" type="text" name="surename" id="enroll-surename" required>
+                        <label for="enroll-surename" class="enroll-field-label">Фамилия</label>
+                    </div>
+                    <div class="enroll-field-wrap">
+                        <input class="enroll-input enroll-input-field" type="tel" name="phone" id="enroll-phone" required pattern="+7 [0-9]-[0-9]">
+                        <label for="enroll-phone" class="enroll-field-label">Телефон</label>
+                    </div>
+                    <input type="hidden" name="lesson" value="">
+                    <input class="submit-button enroll-input" type="submit" value="Записаться">
+                </form>
+            </div>
+            <div class="modal-about modal-block">
+                <div class="modal-about-tabs">
+                    <div class="modal-about-tab current">О занятии</div>
+                    <div class="modal-about-tab">О преподавателе</div>
+                    <div class="modal-about-tab">Фото</div>
+                    <div class="modal-about-tab">Видео</div>
+                </div>
+                <div class="modal-tabs-bodies">
+                    <div class="modal-about-tab-body current">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit asperiores obcaecati nostrum, minus aspernatur officia placeat mollitia nam adipisci earum quidem aliquid, eligendi quos, explicabo quo voluptates officiis vitae delectus.
+                    </div>
+                    <div class="modal-about-tab-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus placeat sapiente magnam neque quaerat quia praesentium odit. Odit aspernatur non quis! Asperiores odit maxime ipsum, quo minus veritatis! Totam!
+                    </div>
+                    <div class="modal-about-tab-body"></div>
+                    <div class="modal-about-tab-body"></div>
+                </div>
+            </div>
+            <div class="modal-teacher modal-block">
+                <img class="modal-teacher-photo" src="/img/avatar.png" alt="">
+                <div class="modal-teacher-info">
+                    <span class="modal-teacher-heading">Преподаватель</span>
+                    <br>
+                    <span class="modal-teacher-name">Диана Ахметова</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
