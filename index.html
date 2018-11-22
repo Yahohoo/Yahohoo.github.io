@@ -1,6 +1,6 @@
 </html>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -18,21 +18,27 @@
         <div class="mc-cards"></div>
     </div>
 
-    <div class="enroll-modal-box open">
+    <div class="enroll-modal-box">
         <div class="enroll-modal">
-            <div class="modal-close"><img class="modal-close-icon" src="/img/close-button.svg" alt=""></div>
-
+            <img class="modal-close" src="/img/close-button.svg" alt="">
             <div class="modal-header modal-block">
-                <img class="modal-header-cover" src="https://storage.geekclass.ru/images/080d1774-fece-462b-9388-46cc311eb657.jpg" alt="">
+                <img class="modal-header-cover" src="img/cover-default.jpg" alt="">
                 <div class="modal-header-info">
-                    <div class="modal-header-title">Моды Minecraft</div>
+                    <div class="modal-header-title"></div>
                     <div class="modal-header-extra">
-                        <span class="header-extra-item"><img class="extra-item-icon" src="/img/level.svg" alt=""> <span>1-2 класс</span></span>
-                        <span class="header-extra-item"><img class="extra-item-icon" src="/img/clock.svg" alt=""> <span>90 мин</span></span>
+                        <span class="header-extra-item age"><img class="extra-item-icon" src="/img/age-icon.svg" alt><span></span></span>
+                        <span class="header-extra-item duration"><img class="extra-item-icon" src="/img/clock.svg" alt><span></span></span>
                     </div>
                 </div>
             </div>
-
+            <div class="pre-enroll">
+                    <div class="event-info">
+                        <div class="event-info-item date"></div>
+                        <div class="event-info-item address"></div>
+                        <div class="event-info-item time"></div>
+                    </div>
+                    <button class="modal-button show-form">Запись</button>
+            </div>
             <div class="modal-enroll modal-block">
                 <form class="modal-enroll-form" action="/" method="POST">
                     <div class="enroll-field-wrap">
@@ -47,11 +53,12 @@
                         <input class="enroll-input enroll-input-field" type="tel" name="phone" id="enroll-phone" required pattern="+7 [0-9]-[0-9]">
                         <label for="enroll-phone" class="enroll-field-label">Телефон</label>
                     </div>
-                    <input type="hidden" name="lesson" value="">
-                    <input class="submit-button enroll-input" type="submit" value="Записаться">
+                    <input type="hidden" name="lessonId" value="">
+                    <input class="modal-button enroll-input" type="submit" value="Записаться">
                 </form>
+                <div class="enroll-success">Спасибо за заявку! <br> Мы свяжемся с вами в ближайшее время.</div>
             </div>
-            <div class="modal-about modal-block">
+            <!-- <div class="modal-about modal-block">
                 <div class="modal-about-tabs">
                     <div class="modal-about-tab current">О занятии</div>
                     <div class="modal-about-tab">О преподавателе</div>
@@ -70,13 +77,13 @@
                 </div>
             </div>
             <div class="modal-teacher modal-block">
-                <img class="modal-teacher-photo" src="/img/avatar.png" alt="">
+                <img class="modal-teacher-photo" src="/img/avatar-default.png" alt="">
                 <div class="modal-teacher-info">
                     <span class="modal-teacher-heading">Преподаватель</span>
                     <br>
                     <span class="modal-teacher-name">Диана Ахметова</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
