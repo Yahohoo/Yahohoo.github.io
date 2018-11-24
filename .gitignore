@@ -2,3 +2,6 @@
 .vscode
 items.json
 style.scss
+node_modules
+test.html
+script.test.js

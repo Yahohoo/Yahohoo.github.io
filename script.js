@@ -227,7 +227,9 @@ function initListeners() {
             const data = $(this).parent().data('item')
 
             if (data.id != modalState.lastInvokedId) {
+                modalState.lastInvokedId = data.id
                 $('.enroll-modal').replaceWith(modalState.modal)
+                modalState.modal = modalState.modal.clone(true)
             }
 
             fillModal(data)
