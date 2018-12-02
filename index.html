@@ -37,21 +37,22 @@
                 <button class="modal-button show-form">Запись</button>
             </div>
             <div class="modal-enroll modal-block">
-                <form class="modal-enroll-form" action="https://postman-echo.com/post" method="POST">
+                <form class="modal-enroll-form">
                     <div class="enroll-field-wrap">
                         <input class="enroll-input enroll-input-field" type="text" name="name" id="enroll-name" required>
                         <label for="enroll-name" class="enroll-field-label">Имя</label>
                     </div>
                     <div class="enroll-field-wrap">
-                        <input class="enroll-input enroll-input-field" type="text" name="surename" id="enroll-surename" required>
-                        <label for="enroll-surename" class="enroll-field-label">Фамилия</label>
+                        <input class="enroll-input enroll-input-field" type="email" name="email" id="enroll-surename">
+                        <label for="enroll-surename" class="enroll-field-label">Email</label>
                     </div>
                     <div class="enroll-field-wrap">
-                        <input class="enroll-input enroll-input-field" type="tel" name="phone" id="enroll-phone" required>
+                        <input class="enroll-input enroll-input-field" value="+7" type="tel" name="phone" id="enroll-phone" required>
                         <label for="enroll-phone" class="enroll-field-label">Телефон</label>
                     </div>
-                    <input type="hidden" name="lessonId" value="">
-                    <input class="modal-button enroll-input" type="submit" value="Записаться">
+                    <input type="hidden" name="baseLessonId" value="">
+                    <input type="hidden" name="regSourceId" value="43">
+                    <input class="modal-button enroll-input submit-enroll" type="submit" value="Записаться">
                 </form>
                 <div class="enroll-success">Спасибо за заявку! <br> Мы свяжемся с вами в ближайшее время.</div>
             </div>
