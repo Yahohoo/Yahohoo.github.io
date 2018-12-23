@@ -2,89 +2,149 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Мастер-классы</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Мастер-классы</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <style>
+      body {
+            font-family: Exo-2, sans-serif;
+        }
+
+      .preloader {
+          z-index: 10;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: #ededee;
+      }
+
+      .preloader-message {
+          font-size: 1.5rem;
+          text-align: center;
+          margin-bottom: 10px;
+      }
+
+      .preloader-spinner-container {
+          position: relative;
+      }
+
+      .preloader-spinner {
+          /* position: absolute; */
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 8px solid #000;
+          border-color: #1d3f72 transparent #1d3f72 transparent;
+          animation: lds-dual-ring 1s linear infinite;
+      }
+
+      @keyframes lds-dual-ring {
+          0% {
+              -webkit-transform: rotate(0);
+              transform: rotate(0);
+          }
+
+          100% {
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+          }
+      } 
+    </style>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 <link href="styles.css" rel="stylesheet"></head>
 
 <body>
-    <div class="master-classes">
-        <div class="mc-cards"></div>
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-message">
+        Подождите, расписание загружается
+      </div>
     </div>
 
-    <div class="enroll-modal-box">
-        <div class="enroll-modal">
-            <img class="modal-close" src="img/close-button.svg" alt="">
-            <div class="modal-header modal-block">
-                <img class="modal-header-cover" src="" alt="">
-                <div class="modal-header-info">
-                    <div class="modal-header-title"></div>
-                    <div class="modal-header-extra">
-                        <span class="header-extra-item age"><img class="extra-item-icon" src="img/age-icon.svg" alt><span></span></span>
-                        <span class="header-extra-item duration"><img class="extra-item-icon" src="img/clock.svg" alt><span></span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="pre-enroll">
-                <div class="event-info">
-                    <div class="event-info-item date"></div>
-                    <div class="event-info-item address"></div>
-                    <div class="event-info-item time"></div>
-                </div>
-                <button class="modal-button show-form">Запись</button>
-            </div>
-            <div class="modal-enroll modal-block">
-                <form class="modal-enroll-form">
-                    <div class="enroll-field-wrap">
-                        <input class="enroll-input enroll-input-field" type="text" name="name" id="enroll-name" required>
-                        <label for="enroll-name" class="enroll-field-label">Имя</label>
-                    </div>
-                    <div class="enroll-field-wrap">
-                        <input class="enroll-input enroll-input-field" type="email" name="email" id="enroll-surename">
-                        <label for="enroll-surename" class="enroll-field-label">Email</label>
-                    </div>
-                    <div class="enroll-field-wrap">
-                        <input class="enroll-input enroll-input-field" value="+7" type="tel" name="phone" id="enroll-phone" pattern="\+7[0-9]{10}" title="+79996662233" required>
-                        <label for="enroll-phone" class="enroll-field-label">Телефон</label>
-                    </div>
-                    <input type="hidden" class="targetId" name="lessonId" value="">
-                    <input type="hidden" name="regSourceId" value="2">
-                    <input class="modal-button enroll-input submit-enroll" type="submit" value="Записаться">
-                </form>
-                <div class="enroll-success enroll-status">Спасибо за заявку! <br> Мы свяжемся с вами в ближайшее время.</div>
-                <div class="enroll-fail enroll-status">К сожалению, что-то пошло не так и мы не смогли принять вашу заявку. <br> Вы можете связаться с нами по телефону +7(495) 255-57-10</div>
-            </div>
-            <div class="modal-about modal-block">
-                <div class="modal-about-tabs">
-                    <div class="modal-about-tab description-tab current">О занятии</div>
-                    <div class="modal-about-tab teacher-tab">О преподавателе</div>
-                    <div class="modal-about-tab photo-tab">Фото</div>
-                    <div class="modal-about-tab video-tab">Видео</div>
-                </div>
-                <div class="modal-tabs-bodies">
-                    <div class="modal-about-tab-body">
-                        <div class="description-tab-body"></div>
-                    </div>
-                    <div class="modal-about-tab-body teacher-tab-body">
-                    </div>
-                    <div class="modal-about-tab-body"></div>
-                    <div class="modal-about-tab-body"></div>
-                </div>
-            </div>
-            <div class="modal-teacher modal-block">
-                <img class="modal-teacher-photo" src="" alt="">
-                <div class="modal-teacher-info">
-                    <span class="modal-teacher-heading">Преподаватель</span>
-                    <br>
-                    <span class="modal-teacher-name"></span>
-                </div>
-            </div>
-        </div>
+    <div class="preloader-spinner-container">
+      <div class="preloader-spinner"></div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.3/iframeResizer.contentWindow.min.js"></script>
+  </div>
+
+  <div class="master-classes">
+    <div class="mc-cards"></div>
+  </div>
+
+  <div class="enroll-modal-box">
+    <div class="enroll-modal">
+      <button class="modal-close"><img src="img/close-button.svg" alt=""></button>
+      <div class="modal-header modal-block">
+        <img class="modal-header-cover" src="" alt="">
+        <div class="modal-header-info">
+          <div class="modal-header-title"></div>
+          <div class="modal-header-extra">
+            <span class="header-extra-item age"><img class="extra-item-icon" src="img/age-icon.svg" alt><span></span></span>
+            <span class="header-extra-item duration"><img class="extra-item-icon" src="img/clock.svg" alt><span></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="pre-enroll">
+        <div class="event-info">
+          <div class="event-info-item date"></div>
+          <div class="event-info-item address"></div>
+          <div class="event-info-item time"></div>
+        </div>
+        <button class="modal-button show-form">Запись</button>
+      </div>
+      <div class="modal-enroll modal-block">
+        <form class="modal-enroll-form">
+          <div class="enroll-field-wrap">
+            <input class="enroll-input enroll-input-field" type="text" name="name" id="enroll-name" required>
+            <label for="enroll-name" class="enroll-field-label">Имя</label>
+          </div>
+          <div class="enroll-field-wrap">
+            <input class="enroll-input enroll-input-field" type="email" name="email" id="enroll-surename">
+            <label for="enroll-surename" class="enroll-field-label">Email</label>
+          </div>
+          <div class="enroll-field-wrap">
+            <input class="enroll-input enroll-input-field" value="+7" type="tel" name="phone" id="enroll-phone" pattern="\+7[0-9]{10}" title="+79996662233" required>
+            <label for="enroll-phone" class="enroll-field-label">Телефон</label>
+          </div>
+          <input type="hidden" class="targetId" name="lessonId" value="">
+          <input type="hidden" name="regSourceId" value="2">
+          <input class="modal-button enroll-input submit-enroll" type="submit" value="Записаться">
+        </form>
+        <div class="enroll-success enroll-status">Спасибо за заявку! <br> Мы свяжемся с вами в ближайшее время.</div>
+        <div class="enroll-fail enroll-status">К сожалению, что-то пошло не так и мы не смогли принять вашу
+          заявку. <br> Вы можете связаться с нами по телефону +7(495) 255-57-10</div>
+      </div>
+      <div class="modal-about modal-block">
+        <div class="modal-about-tabs">
+          <div class="modal-about-tab description-tab current">О занятии</div>
+          <div class="modal-about-tab teacher-tab">О преподавателе</div>
+          <div class="modal-about-tab photo-tab">Фото</div>
+          <div class="modal-about-tab video-tab">Видео</div>
+        </div>
+        <div class="modal-tabs-bodies">
+          <div class="modal-about-tab-body">
+            <div class="description-tab-body"></div>
+          </div>
+          <div class="modal-about-tab-body teacher-tab-body">
+          </div>
+          <div class="modal-about-tab-body"></div>
+          <div class="modal-about-tab-body"></div>
+        </div>
+      </div>
+      <div class="modal-teacher modal-block">
+        <img class="modal-teacher-photo" src="" alt="">
+        <div class="modal-teacher-info">
+          <span class="modal-teacher-heading">Преподаватель</span>
+          <br>
+          <span class="modal-teacher-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.3/iframeResizer.contentWindow.min.js"></script>
 <script type="text/javascript" src="main.js"></script></body>
 
 </html>
